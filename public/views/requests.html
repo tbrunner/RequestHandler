@@ -1,0 +1,13 @@
+﻿<div class="jumbotron">
+	<h1 class="text-center">Requests</h1>
+
+	<p>{{ message }}</p>
+	<input type="search" ng-model="q.$" placeholder="filter ideas..." />
+	<ol class="idea-list">
+		<li class="idea-list-element list-group" ng-repeat="post in posts | orderBy: '-votes' | filter:q" ng-init="show = false; clicked = false">
+			<h4 class="" ng-click="show = !show">{{post.description}}</h4>  	
+			<div class="well well-sm details" ng-click="show = !show" ng-show="show">{{post.details}}</div>
+			<span class=" btn btn-default glyphicon glyphicon-thumbs-up" ng-click="IncrementVote(post)"></span>
+		</li>
+	</ol>
+</div>
