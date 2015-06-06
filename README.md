@@ -7,4 +7,3 @@ MEAN stack site built to handle user requests with upvote functionality
 4. run mongod.exe
 5. run npm start
 6. navigate to localhost:3000/
-7. 
